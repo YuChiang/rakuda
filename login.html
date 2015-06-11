@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <title>登入</title>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">RakudaPack</a>
+      </div>
+        <div>
+      
+          <ul class="nav navbar-nav navbar-right">
+              <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> 登入</a></li>
+              <li><a href="register.html"><span class="glyphicon glyphicon-user"></span> 快速註冊</a></li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+  <div class="col-md-offset-4 col-md-4">
+    <h2><span class="glyphicon glyphicon-log-in"></span> 登入</h2>
+    <form action="post">
+      <div class="form-group">
+        <label for="username">帳號</label>
+        <input type="text" class="form-control" id="username" placeholder="Username">
+      </div>
+      <div class="form-group">
+        <label for="pwd">密碼</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Password">
+      </div>
+      <div class="checkbox">
+        <label class="control-label" for="remember_me">
+          <input type="checkbox" name="remember_me" id="remember_me"/> Remember me 
+        </label>
+      </div>
+      <div class="form-group">        
+        <button class="btn btn-lg btn-primary" type="submit">Submit</button>
+      </div>
+    </form> 
+
+  </div>
+</body>
