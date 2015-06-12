@@ -5,7 +5,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
-  <title>登入 - RakudaPack</title>
+  <title>確認信通知 - RakudaPack</title>
 </head>
 <body>
   <nav class="navbar navbar-inverse">
@@ -21,25 +21,11 @@
       </div>
     </div>
   </nav>
-  <div class="col-md-offset-4 col-md-4">
-    <h2><span class="glyphicon glyphicon-log-in"></span> 登入</h2>
-    <form action="post">
-      <div class="form-group">
-        <label for="username">帳號</label>
-        <input type="text" class="form-control" id="username" placeholder="Username">
-      </div>
-      <div class="form-group">
-        <label for="pwd">密碼</label>
-        <input type="password" class="form-control" id="pwd" placeholder="Password">
-      </div>
-      <div class="checkbox">
-        <label class="control-label" for="remember_me">
-          <input type="checkbox" name="remember_me" id="remember_me"/> Remember me 
-        </label>
-      </div>
-      <div class="form-group">        
-        <a href="index.html"><button class="btn btn-primary" type="submit">登入</button></a>
-      </div>
-    </form> 
+  
+  <div class="container">
+    <div class="alert alert-warning" role="alert">
+      <b>請至學校信箱收取確認信</b>，如未收到，請<a href="#">點選此處</a>以重新寄送。<br>
+      <b>Please check your school mailbox to receive the confirmation mail</b>, or click <a href="#">here</a> to resend .
+    </div>
   </div>
 </body>
