@@ -55,13 +55,22 @@
   <nav class="navbar navbar-inverse">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">RakudaPack</a>
+        <a class="navbar-brand" href="login.html">RakudaPack</a>
       </div>
       <div>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="request.html">新增任務</a></li>
           <li><a href="#">進行中任務</a></li>
-          <li><a href="#">資料</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> 肚子餓<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="member.html">會員資料</a></li>
+              <li><a href="mission.html">任務記錄</a></li>
+              <li><a href="point.html">點數記錄</a></li>
+              <li class="divider"></li>
+              <li><a href="#">登出</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -70,6 +79,7 @@
     <div id="map-container" class="col-md-6"></div>
     <div class="container">
       <div class="col-md-6">
+        <!-- demo case!!! -->
         <div href="#" class="thumbnail">
           <h4>[20點]吃飯</h4>
           <p>發起人：新之助</p>
@@ -77,9 +87,56 @@
           <h6>地點：這裡</h6>
           <h6>時間：今天</h6>
           <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal">詳細資料</button>
-          <button type="button" class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#myModal2">接取任務</button>
-          
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">[20點]吃飯</h4>
+                </div>
+                <div class="modal-body">
+                   <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <td>任務名稱</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>面交地點</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>面交時間</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>點數</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>備註</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="accept.html" type="button" class="btn btn-primary navbar-btn">接取任務</a>
         </div>
+        <!-- demo case!!! -->
+
+
+
+
+
+
+
+
         <div href="#" class="thumbnail">
           <h4>[15點]睡覺</h4>
           <p>發起人：吉永老師</p>
@@ -90,11 +147,11 @@
           <button type="button" class="btn btn-primary navbar-btn">接取任務</button>
         </div>
         <div href="#" class="thumbnail">
-          <h4>[15點]睡覺</h4>
-          <p>發起人：吉永老師</p>
+          <h4>[50點]打東東</h4>
+          <p>發起人：正男</p>
           <img src="img/3.jpg">
           <h6>地點：那裡</h6>
-          <h6>時間：現在</h6>
+          <h6>時間：明天</h6>
           <button type="button" class="btn btn-default navbar-btn">詳細資料</button>
           <button type="button" class="btn btn-primary navbar-btn">接取任務</button>
         </div>
