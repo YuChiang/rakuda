@@ -11,10 +11,14 @@
     <!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
-  <![endif]-->
+    <![endif]-->
     <style>
     #map-container {
         height: 600px
+    }
+    #mission_block {
+        overflow-y: scroll; 
+        height: 600px;
     }
     </style>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -25,6 +29,8 @@
     <script>
     function init_map() {
         var var_location = new google.maps.LatLng(25.018408, 121.539842);
+        var var_location2 = new google.maps.LatLng(25.037955, 121.525173);
+        var var_location3 = new google.maps.LatLng(25.017358, 121.534392);
 
         var var_mapoptions = {
             center: var_location,
@@ -34,13 +40,25 @@
         var var_marker = new google.maps.Marker({
             position: var_location,
             map: var_map,
-            title: "Venice"
+            title: "NTU"
+        });
+        var var_marker2 = new google.maps.Marker({
+            position: var_location2,
+            map: var_map,
+            title: "NTUST"
+        });
+        var var_marker3 = new google.maps.Marker({
+            position: var_location3,
+            map: var_map,
+            title: "MRT"
         });
 
         var var_map = new google.maps.Map(document.getElementById("map-container"),
             var_mapoptions);
 
         var_marker.setMap(var_map);
+        var_marker2.setMap(var_map);
+        var_marker3.setMap(var_map);
 
     }
 
@@ -48,9 +66,6 @@
     </script>
     <script>
     $('#myModal').on('shown.bs.modal', function() {
-        $('#myInput').focus()
-    })
-    $('#myModal2').on('shown.bs.modal', function() {
         $('#myInput').focus()
     })
     </script>
@@ -70,7 +85,7 @@
                         <a href="point.html"><span class="badge badge-important">100</span>點</a>
                     </li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> 選項<span class="caret"></span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> linroex<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="member.html">會員資料</a></li>
                             <li><a href="mission.html">任務記錄</a></li>
@@ -85,8 +100,8 @@
     </nav>
     <div class="container">
         <div id="map-container" class="col-md-6"></div>
-        <div class="container">
-            <div class="col-md-6">
+        <div id="mission_block">
+            <div class="col-md-12">
                 <!-- demo case!!! -->
                 <div href="#" class="thumbnail">
                     <h4>[20點]幫我買麥當勞</h4>
