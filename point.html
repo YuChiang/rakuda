@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand" href="index2.html">RakudaPack</a>
@@ -50,57 +50,59 @@
             </div>
         </div>
     </nav>
-    <div class="col-md-offset-2 col-md-8">
-        <div class="panel panel-primary">
-            <div class="panel-heading">
-                <h3 class="panel-title">點數記錄</h3>
-            </div>
-            <div class="panel-body">
-                <div class="form-group col-md-offset-3 col-md-6">
-                    <label for="range">轉出/轉入/不限</label>
-                    <select name="range" class="form-control">
-                        <option value="all" selected="true">不限</option>
-                        <option value="trade_out">轉出</option>
-                        <option value="trade_in">轉入</option>
-                    </select>
+    <div class="container" style="padding-top:70px">
+        <div class="col-md-offset-2 col-md-8">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">點數記錄</h3>
                 </div>
-                <div class="input-daterange input-group col-md-offset-3 col-md-6"id="datepicker" name="datepicker">
-                    <input type="text" class="input-sm form-control" name="start" id="start_date"/>
-                    <span class="input-group-addon">to</span>
-                    <input type="text" class="input-sm form-control" name="end" id="end_date"/>
+                <div class="panel-body">
+                    <div class="form-group col-md-offset-3 col-md-6">
+                        <label for="range">轉出/轉入/不限</label>
+                        <select name="range" class="form-control">
+                            <option value="all" selected="true">不限</option>
+                            <option value="trade_out">轉出</option>
+                            <option value="trade_in">轉入</option>
+                        </select>
+                    </div>
+                    <div class="input-daterange input-group col-md-offset-3 col-md-6"id="datepicker" name="datepicker">
+                        <input type="text" class="input-sm form-control" name="start" id="start_date"/>
+                        <span class="input-group-addon">to</span>
+                        <input type="text" class="input-sm form-control" name="end" id="end_date"/>
+                    </div>
+                    <br>
+                    <table class="table">
+                        <tr>
+                          <th>日期</th>
+                          <th>時間</th>       
+                          <th>對象</th>
+                          <th>事由</th>
+                          <th>點數</th>
+                          <th>結餘</th>
+                          <th>轉出/轉入</th>
+                        </tr>
+                        <tr>
+                          <td>2014/5/13</td>
+                          <td>19:05</td>        
+                          <td>林熙哲</td>
+                          <td>幫我買麥當勞</td>
+                          <td>20</td>
+                          <td>480</td>
+                          <td>轉出</td>
+                        </tr>
+                        <tr>
+                          <td>2014/5/12</td>
+                          <td>07:023</td>        
+                          <td>劉晏辰</td>
+                          <td>幫我裝水</td>
+                          <td>50</td>
+                          <td>500</td>
+                          <td>轉入</td>
+                        </tr>
+                    </table>    
                 </div>
-                <br>
-                <table class="table">
-                    <tr>
-                      <th>日期</th>
-                      <th>時間</th>       
-                      <th>對象</th>
-                      <th>事由</th>
-                      <th>點數</th>
-                      <th>結餘</th>
-                      <th>轉出/轉入</th>
-                    </tr>
-                    <tr>
-                      <td>2014/5/13</td>
-                      <td>19:05</td>        
-                      <td>林熙哲</td>
-                      <td>幫我買麥當勞</td>
-                      <td>20</td>
-                      <td>480</td>
-                      <td>轉出</td>
-                    </tr>
-                    <tr>
-                      <td>2014/5/12</td>
-                      <td>07:023</td>        
-                      <td>劉晏辰</td>
-                      <td>幫我裝水</td>
-                      <td>50</td>
-                      <td>500</td>
-                      <td>轉入</td>
-                    </tr>
-                </table>    
+                
             </div>
-            
         </div>
     </div>
 </body>

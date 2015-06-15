@@ -25,6 +25,8 @@
     <script>
     function init_map() {
         var var_location = new google.maps.LatLng(25.018408, 121.539842);
+        var var_location2 = new google.maps.LatLng(25.037955, 121.525173);
+        var var_location3 = new google.maps.LatLng(25.017358, 121.534392);
 
         var var_mapoptions = {
             center: var_location,
@@ -34,13 +36,25 @@
         var var_marker = new google.maps.Marker({
             position: var_location,
             map: var_map,
-            title: "Venice"
+            title: "NTU"
+        });
+        var var_marker2 = new google.maps.Marker({
+            position: var_location2,
+            map: var_map,
+            title: "NTUST"
+        });
+        var var_marker3 = new google.maps.Marker({
+            position: var_location3,
+            map: var_map,
+            title: "MRT"
         });
 
         var var_map = new google.maps.Map(document.getElementById("map-container"),
             var_mapoptions);
 
         var_marker.setMap(var_map);
+        var_marker2.setMap(var_map);
+        var_marker3.setMap(var_map);
 
     }
 
@@ -50,14 +64,11 @@
     $('#myModal').on('shown.bs.modal', function() {
         $('#myInput').focus()
     })
-    $('#myModal2').on('shown.bs.modal', function() {
-        $('#myInput').focus()
-    })
     </script>
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand" href="index2.html">RakudaPack</a>
@@ -83,7 +94,7 @@
             </div>
         </div>
     </nav>
-    <div class="container">
+    <div class="container" style="padding-top: 70px;">
         <div id="map-container" class="col-md-6"></div>
         <div class="container">
             <div class="col-md-6">
